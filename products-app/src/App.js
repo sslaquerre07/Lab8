@@ -6,7 +6,7 @@ import ProductDetails from './components/ProductDetails';
 import ProductForm from './components/ProductForm'
 import NotFoundPage from './components/NotFoundPage';
 import HomePage from './components/HomePage';
-import {FontAwesomIcon} from '@fortawesome/react-fontawesome';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHome, faList, faPlus} from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
@@ -25,17 +25,17 @@ function App(){
                   <ul>
                     <li className='nav-item'>
                       <Link className="nav-link" to="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home">
-                        <FontAwesomIcon icon={faHome} />
+                        <FontAwesomeIcon icon={faHome} />
                       </Link>
                     </li>
                     <li className='nav-item'>
                       <Link className="nav-link" to="/products" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Product List">
-                        <FontAwesomIcon icon={faList} />
+                        <FontAwesomeIcon icon={faList} />
                       </Link>
                     </li>
                     <li className='nav-item'>
                       <Link className="nav-link" to="/add" data-bs-toggle="tooltip" data-bs-placement="bottom" title="AddProduct">
-                        <FontAwesomIcon icon={faPlus} />
+                        <FontAwesomeIcon icon={faPlus} />
                       </Link>
                     </li>
                   </ul>

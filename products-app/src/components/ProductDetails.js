@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import DeleteButton from './DeleteButton';
 import { getProductDetails } from '../services/apiService';
-import { useParams } from 'react-reouter-dom';
+import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 const ProductDetails = () => {
