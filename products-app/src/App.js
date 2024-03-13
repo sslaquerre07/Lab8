@@ -1,10 +1,16 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
+
 import ProductList from './components/ProductList';
+import ProductDetails from './components/ProductDetails';
+import ProductForm from './components/ProductForm'
 import NotFoundPage from './components/NotFoundPage';
 import HomePage from './components/HomePage';
+import {FontAwesomIcon} from '@fortawesome/react-fontawesome';
+import {faHome, faList, faPlus} from '@fortawesome/free-solid-svg-icons';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { ProductsProvider } from './context/ProductsContext';
-
-import { BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
 
 function App(){
   return(
@@ -13,18 +19,28 @@ function App(){
         <Router>
           <div>
             {/*Navigation Links*/}
-            <nav>
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/products">Product List</Link>
-                </li>
-                <li>
-                  <Link to="/add">Add Product</Link>
-                </li>
-              </ul>
+            <nav className="navbar navbar-expand navbar-light fullwidth">
+              <div className='container-fluid'>
+                <div className="collapse nav-bar-collapse" id="navbarNav">
+                  <ul>
+                    <li className='nav-item'>
+                      <Link className="nav-link" to="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Home">
+                        <FontAwesomIcon icon={faHome} />
+                      </Link>
+                    </li>
+                    <li className='nav-item'>
+                      <Link className="nav-link" to="/products" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Product List">
+                        <FontAwesomIcon icon={faList} />
+                      </Link>
+                    </li>
+                    <li className='nav-item'>
+                      <Link className="nav-link" to="/add" data-bs-toggle="tooltip" data-bs-placement="bottom" title="AddProduct">
+                        <FontAwesomIcon icon={faPlus} />
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </nav>
             {/*Routes for different pages */}
             <Routes>
