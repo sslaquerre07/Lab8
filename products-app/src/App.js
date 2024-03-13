@@ -4,6 +4,8 @@ import HomePage from './components/HomePage';
 import './App.css';
 import { ProductsProvider } from './context/ProductsContext';
 
+import { BrowserRouter as Router, Route, Link, Routes} from 'react-router-dom';
+
 function App(){
   return(
     <div className = "App">
